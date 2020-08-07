@@ -1,37 +1,44 @@
-## Welcome to GitHub Pages
+*This documentation will eventually get updated*
 
-You can use the [editor on GitHub](https://github.com/DeveloperTK/vocabulary/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Features
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Test your vocabulary skills
+* Import your own word lists
+* Deploy it on your own server and curate your own lists and categorys (Language levels or classes)
 
-### Markdown
+## How to use
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+You can either test the app at [vocabulary.foxat.de](vocabulary.foxat.de) or download the source code and deploy it on your own server. You will need PHP in order to run it on your own server.
 
-```markdown
-Syntax highlighted code block
+## Tutorial: Create your own word list
 
-# Header 1
-## Header 2
-### Header 3
+Just create a .cvs file with the following structure:
 
-- Bulleted
-- List
+Mother Language  | Foreign Language
+---------------- | ----------------
+word 1           | word 1 translation
+word 2           | word 2 translation
+...              | ...
 
-1. Numbered
-2. List
+The lanuguages in the header cells should be represented as their Countrys ISO Code. (Example: Germany - de, Italian - it)
 
-**Bold** and _Italic_ and `Code` text
+## Tutorial: Curate your own public vocabulary lists
 
-[Link](url) and ![Image](src)
-```
+Inside the `/lists` directory, you can find the `lists.json` configuration File. The basic structure should look like this:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DeveloperTK/vocabulary/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    [
+        {
+            name: 'List No. 1',
+            languages: ['en', 'es'],
+            category: 'Spanish Level 1',
+            file: 'es-l1-no1.csv'
+        },
+        {
+            name: 'Business Language',
+            languages: ['de', 'en'],
+            category: 'Englisch Klasse 10',
+            file: 'business-10a.csv'
+        }
+    ]
+    
+To insert your own lists, make sure that you put in consistent categorys and language codes.
