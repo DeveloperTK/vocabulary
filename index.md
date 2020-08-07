@@ -8,7 +8,7 @@
 
 ## How to use
 
-You can either test the app at [vocabulary.foxat.de](vocabulary.foxat.de) or download the source code and deploy it on your own server. You will need PHP in order to run it on your own server.
+You can either test the app at [vocabulary.foxat.de](http://vocabulary.foxat.de/) or download the source code and deploy it on your own server. You will need PHP in order to run it on your own server.
 
 ## Tutorial: Create your own word list
 
